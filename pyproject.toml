@@ -16,6 +16,7 @@ dependencies = [
   "langgraph-checkpoint-sqlite>=3.0.0",
   "psycopg[binary]>=3.3.2",
   "rich>=14.2.0",
+  "langchain-openai>=1.1.7",
 ]
 
 
