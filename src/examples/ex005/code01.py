@@ -1,6 +1,5 @@
 from langchain.tools import tool, BaseTool
 from rich import print
-from langchain.chat_models import init_chat_model
 from langchain_core.messages import (
     BaseMessage,
     SystemMessage,
@@ -28,7 +27,7 @@ def multiply(a: float, b: float) -> float:
 
 llm = ChatOpenAI(
     model="openrouter/pony-alpha",
-    api_key=os.getenv("OPENROUTER_API_KEY"),
+    api_key=os.getenv("OPENROUTER_API_KEY"), #type:ignore
     base_url="https://openrouter.ai/api/v1",
 )
 
