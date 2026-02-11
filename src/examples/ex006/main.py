@@ -4,7 +4,6 @@ from rich import print
 from rich.prompt import Prompt
 from rich.markdown import Markdown
 from examples.ex006.prompts import SYSTEM_PROMPT
-
 from examples.ex006.graph import build_graph
 
 def main() -> None:
