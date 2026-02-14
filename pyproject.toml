@@ -18,6 +18,11 @@ dependencies = [
   "rich>=14.2.0",
   "langchain-openai>=1.1.7",
   "langgraph-cli[inmem]>=0.4.12",
+  "langchain-text-splitters>=1.1.0",
+  "langchain-community>=0.4.1",
+  "pypdf>=6.7.0",
+  "langchain-voyageai>=0.3.2",
+  "transformers>=5.1.0",
 ]
 
 
