@@ -9,6 +9,7 @@ db.json
 temp
 audios/
 **/.langgraph_api
+chroma_langchain_db/
 
 # Logs
 logs

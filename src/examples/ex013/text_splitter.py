@@ -1,7 +1,7 @@
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_openai import OpenAIEmbeddings
-from examples.ex013.env import get_env
+from examples.ex014.env import get_env
 from langchain_community.retrievers import KNNRetriever
 from rich import print
 
@@ -19,6 +19,7 @@ docs = loader.load()
 # print(docs[0].metadata)
 
 # ----------------------------- Chunk --------------------------------
+
 """ 
 Aqui, usaremos um divisor de texto simples 
 que divide o texto com base em caracteres. Dividiremos nossos 
@@ -87,7 +88,7 @@ query_embd = embeddings.embed_query(query)
 O KNNRetriever faz todas as operações citadas acima
 
 - from_text aceita uma lista de string como documentos e a embendings, que é o
-modelo que vai realizar a aoperação de transformação do texto da docs e da query
+modelo que vai realizar a operação de transformação do texto da docs e da query
 em embendings.
 
 -Ao final ele faz a busca no pdf dos rechos que mais se relaciona

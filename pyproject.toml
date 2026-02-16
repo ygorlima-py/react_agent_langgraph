@@ -23,6 +23,7 @@ dependencies = [
   "pypdf>=6.7.0",
   "langchain-voyageai>=0.3.2",
   "transformers>=5.1.0",
+  "langchain-chroma>=1.1.0",
 ]
 
 
