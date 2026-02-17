@@ -50,5 +50,6 @@ results = vector_store.similarity_search_with_score(
     k=3, 
 )
 
+
 for res, score in results:
     print(f"* [SIM={score:3f}] {res.page_content} [{res.metadata}]")
