@@ -24,6 +24,9 @@ dependencies = [
   "langchain-voyageai>=0.3.2",
   "transformers>=5.1.0",
   "langchain-chroma>=1.1.0",
+  "beautifulsoup4>=4.14.3",
+  "flashrank>=0.2.10",
+  "rank-bm25>=0.2.2",
 ]
 
 

@@ -49,20 +49,27 @@ prompt = ChatPromptTemplate.from_messages(
    ]
 )
 
-''' A qui'''
+''' Aqui informamos a cadeia que pega uma lista de documentos
+injeta no prompt e chama a llm
+'''
 question_answer_chain = create_stuff_documents_chain(llm, prompt)
 
+'''
+Nesta função create_retrieval_chain ela retorna um objeto que possui atributos
+como invoke que recebe o input do usuario, faz a pesquisa com base no vector_store
+retorna os docuemntos mais semelhantes e injeta no prompt da llm para responder
+'''
 retrieval_chain = create_retrieval_chain(retriever, question_answer_chain)
 
-while True:
-    ask = input("Humano: ")
+# while True:
+#     ask = input("Humano: ")
     
-    if ask in ['exist', 'q', 'sair']:
-        break
-    response = retrieval_chain.invoke({"input":"Olá LLM, análise o lucro do bbsa3 no ultimo trimestre"})
+#     if ask in ['exist', 'q', 'sair']:
+#         break
+#     response = retrieval_chain.invoke({"input":"Olá LLM, análise o lucro do bbsa3 no ultimo trimestre"})
     
-    print(markdown.Markdown("--------------------------------------"))
+#     print(markdown.Markdown("--------------------------------------"))
     
-    print(response["answer"])
+#     print(response["answer"])
 
 
