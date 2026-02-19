@@ -27,13 +27,4 @@ class Models(ModelsParams):
                 api_key=self.api_key,
                 temperature=temperature,
                 )
-    
-    
-if __name__ == "__main__":
-    embending_model = OpenAIEmbeddings(
-                model="qwen/qwen3-embedding-8b",
-                base_url="https://openrouter.ai/api/v1",
-                api_key="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"
-            )
-    response = embending_model.embed_query("Olá porra")
-    print(response)
+        
